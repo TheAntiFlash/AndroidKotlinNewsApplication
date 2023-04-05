@@ -1,8 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
 
 }
 
@@ -40,7 +40,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.4.0'
+        kotlinCompilerExtensionVersion '1.4.4'
     }
     packagingOptions {
         resources {
@@ -50,9 +50,15 @@ android {
 }
 
 dependencies {
+    //dagger Hilt
     implementation "com.google.dagger:hilt-android:2.44.2"
     implementation 'androidx.core:core-ktx:1.9.0'
     kapt "com.google.dagger:hilt-compiler:2.44"
+
+    //Material 3
+    implementation "androidx.compose.material3:material3:1.0.1"
+    implementation "androidx.compose.material3:material3-window-size-class:1.0.1"
+
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
@@ -68,6 +74,11 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 }
 
+hilt {
+    enableAggregatingTask = true
+}
+
 kapt{
     correctErrorTypes true
 }
+
