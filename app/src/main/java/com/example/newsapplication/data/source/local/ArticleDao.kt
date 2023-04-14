@@ -2,6 +2,7 @@ package com.example.newsapplication.data.source.local
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
+import java.time.LocalDate
 import java.util.*
 
 @Dao
@@ -17,8 +18,11 @@ interface ArticleDao {
     suspend fun delete(article: Article)
 
     @Query("SELECT * FROM articles WHERE publishedDate = :date")
-    fun getArticlesByDate(date : Date) : Flow<List<Article>>
+    fun getArticlesByDate(date : LocalDate) : Flow<List<Article>>
 
-    @Query("Select * FROM articles WHERE id = :id")
+    @Query("Select * FROM articles WHERE articleId = :id")
     fun getArticleById(id : Int) : Flow<Article>
+
+    @Query("SELECT * FROM articles")
+    fun getAllArticles() : Flow<List<Article>>
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "205364728706",
+    "project_id": "yahyanewsapplication",
+    "storage_bucket": "yahyanewsapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205364728706:android:9b772f073d7334b742359b",
+        "android_client_info": {
+          "package_name": "com.example.newsapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205364728706-4ad5t40jljsuna4id0rt15bqod6kul51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXv5ef2UQmcOBPFzmU4yyuKHqNWWgc7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205364728706-4ad5t40jljsuna4id0rt15bqod6kul51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
